@@ -1,0 +1,27 @@
+
+
+SELECT board_game.board_game_ID, board_game_name, publisher_name from board_game
+    join board_game_publisher on board_game.board_game_ID = board_game_publisher.board_game_ID 
+	WHERE publisher_name LIKE '%man%';
+	
+
+UPDATE membership set `quantity_purchased`='25' WHERE membership_ID = 1;
+
+
+DELETE FROM membership WHERE membership_ID = 3;
+
+
+INSERT into board_game (`board_game_name`,`publication_date`,`UPC`,`price`,
+`quantity_in_stock`,`designer_first_name`,`designer_last_name`)
+    values ('guessing game','2022-04-09','0 26538 48513 2','40','10','Rachana','Alfvin');
+    
+INSERT into board_game_publisher (`board_game_ID`,`publisher_name`)
+	values ('4','Queen Games');
+	
+INSERT into related_game (board_game_ID,related_game_name,publication_date,UPC,related_reason)
+	values ('4','lucky game','2021-02-26','0 43896 12583 2','recommendation');
+
+
+
+
+
